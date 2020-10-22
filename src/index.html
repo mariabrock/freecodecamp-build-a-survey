@@ -1,0 +1,58 @@
+<DOCTYPE html lang="eng">
+  <html>
+    <head>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./styles.css">
+      <title>FreeCodeCamp Responsive Web Project: Build A Survey Form</title>
+    </head>
+      <body>
+        <div class="container">
+          <h1 id="title">FreeCodeCamp Responsive Web Project: Build A Survey Form</h1>
+            <h2>Sign Up for Mentor Nite!</h2>
+              <p class"" id="description">Use this form to sign up for our discord server!.</p> 
+              <p><em>*Gmail address is required.</em></p>
+
+          <form id="survey-form">
+            <label for="name-label">Your Name:</label>
+              <input type="text" name="name" id="name" placeholder="John Doe" required>
+            <label for="email-label">Your Email:</label>  
+              <input type="email" name="email" id="email" pattern=".+@gmail.com" placeholder="johndoe@gmail.com" required>
+            <label for="number-label">Age:</label>
+              <input type="number" name="age" id="number" min="15" max="150" placeholder="25">
+            <label for="dropdown"></label>  
+              <select id="dropdown">
+                <option value="">Select Your Current Role</option>
+                <option value="student">Student</option>
+                <option value="job">Full Time Job</option>
+                <option value="learner">Full Time Learner</option>
+                <option value="preferNo">Prefer Not to Say</option>
+                <option value="other">Other</option>
+              </select>  
+              <p>Would you recommend us to a friend?</p>
+                <div class="form-group">
+                  <label>
+                    <input type="radio" name="user-recommend" value="definitely" checked>
+                    Definitely
+                  </label>
+                  <label>
+                    <input type="radio" name="user-recommend" value="not-sure">
+                    Not Sure
+                  </label>
+                  <label>
+                    <input type="radio" name="user-recommend" value="nope">
+                    Nope
+                  </label>
+                </div>
+                <p>What Sort of things would you like to do at Mentor Night?</p>
+                <div class="form-group">
+                  <label>
+                    <input type="checkbox" class="input-checkbox" name="wouldLike" value="front-end-projects">
+                    Front-end Projects
+                  </label>
+                </div>
+                
+            <button id="submit">Submit</button>
+          </form>
+        </div>
+      </body>
+  </html>
