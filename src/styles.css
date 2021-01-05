@@ -1,5 +1,21 @@
 *{
   font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: darkblue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1{
@@ -13,3 +29,16 @@ h1{
   justify-content: center;
   align-items: center;
 }
+
+form {
+  display: block;
+  background-color: aqua;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+}
+}
+  

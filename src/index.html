@@ -7,18 +7,35 @@
     </head>
       <body>
         <div class="container">
-          <h1 id="title">FreeCodeCamp Responsive Web Project: Build A Survey Form</h1>
-            <h2>Sign Up for Mentor Nite!</h2>
-              <p class"" id="description">Use this form to sign up for our discord server!.</p> 
+          <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
+          <h1 id="title">Sign Up for Mentor Nite!</h1>
+            <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
+              <p class id="description">Use this form to sign up for our discord server!.</p> 
               <p><em>*Gmail address is required.</em></p>
 
+              <!-- User Story #3: I can see a form with id="survey-form". -->
           <form id="survey-form">
-            <label for="name-label">Your Name:</label>
-              <input type="text" name="name" id="name" placeholder="John Doe" required>
-            <label for="email-label">Your Email:</label>  
-              <input type="email" name="email" id="email" pattern=".+@gmail.com" placeholder="johndoe@gmail.com" required>
+            <div id="form-group">
+              <label for="name-label">Your Name:</label>
+              <!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name" -->
+                <input type="text" name="name" id="name" placeholder="John Doe" required>
+            </div>
+
+            <div id="form-group">
+              <label for="email-label">Your Email:</label>
+              <!-- User Story #5: Inside the form element, I am required to enter an email in a field with id="email".   -->
+              <!-- User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. -->
+                <input type="email" name="email" id="email" pattern=".+@gmail.com" placeholder="johndoe@gmail.com" required>
+            </div>
+
+            <div id="form-group">
             <label for="number-label">Age:</label>
+            <!-- User Story #7: Inside the form, I can enter a number in a field with id="number". -->
+
               <input type="number" name="age" id="number" min="15" max="150" placeholder="25">
+            </div>
+
+            <div id="form-group">
             <label for="dropdown"></label>  
               <select id="dropdown">
                 <option value="">Select Your Current Role</option>
@@ -28,8 +45,10 @@
                 <option value="preferNo">Prefer Not to Say</option>
                 <option value="other">Other</option>
               </select>  
+            </div>
+              <!-- User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. -->
+              <div id="form-group">
               <p>Would you recommend us to a friend?</p>
-                <div class="form-group">
                   <label>
                     <input type="radio" name="user-recommend" value="definitely" checked>
                     Definitely
@@ -42,9 +61,12 @@
                     <input type="radio" name="user-recommend" value="nope">
                     Nope
                   </label>
-                </div>
-                <p>What Sort of things would you like to do at Mentor Night?</p>
+              </div>
+
+                <!-- User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
+                
                 <div class="form-group">
+                  <p>What Sort of things would you like to do at Mentor Night?</p>
                   <label>
                     <input type="checkbox" class="input-checkbox" name="wouldLike" value="front-end-projects">
                     Front-end Projects
@@ -70,11 +92,13 @@
                     Open Source Community
                   </label>
                 </div>
-               <p>Any comments or questions?</p>
+                <!-- User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. -->
+               
                 <div class="form-group">
+                  <p>Any comments or questions?</p>
                   <textarea id="comments" name="comment" placeholder="Type your question or comments here!"></textarea>
                 </div>
-                
+                <!-- User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
                 <div class="form-group">
                   <button class="btn btn-primary" id="submit">Submit</button>
                 </div>
