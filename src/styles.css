@@ -1,6 +1,7 @@
 *{
   font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif;
+  color: white;
   line-height: 1.4;
 }
 
@@ -12,14 +13,31 @@ body::before {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: darkblue;
+  background: #5ac2cd;
+  background-image: linear-gradient( 115deg, rgba(28, 61, 64, 0.8), rgba(227, 246, 248, 0.8) ), url(https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1981&q=80);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-h1{
-  font-size: 1em;
+/* rgba(90, 194, 205, 0.7) ), rgba(68, 68, 68, 0.8), rgba(246, 139, 31, 0.8), rgba(227, 246, 248, 0.8) */
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1, p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+p {
+  font-size: 1.125rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .container {
@@ -32,13 +50,27 @@ h1{
 
 form {
   display: block;
-  background-color: aqua;
+  box-sizing: border-box;
+  background-color: #444444;
   border-radius: 0.25rem;
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 480px) {
   form {
     padding: 2.5rem;
+    box-sizing: border-box;
 }
 }
   
